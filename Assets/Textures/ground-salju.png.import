@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d362xql7eys37"
-path="res://.godot/imported/sepatu.jpg-2243b573f10fd71340c6924ee54f19d8.ctex"
+uid="uid://tqaxy5ccragc"
+path="res://.godot/imported/ground-salju.png-0f2813102be114d045e533a235e1238e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/item/sepatu.jpg"
-dest_files=["res://.godot/imported/sepatu.jpg-2243b573f10fd71340c6924ee54f19d8.ctex"]
+source_file="res://Assets/Textures/ground-salju.png"
+dest_files=["res://.godot/imported/ground-salju.png-0f2813102be114d045e533a235e1238e.ctex"]
 
 [params]
 

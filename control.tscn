@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dyexaljymbi2n"]
+
+[ext_resource type="Script" uid="uid://cmh84lb0j4qvi" path="res://Scripts/film_grain.gd" id="1_xhnuk"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_3o1yi"]
+frequency = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_xhnuk"]
+width = 1152
+height = 648
+noise = SubResource("FastNoiseLite_3o1yi")
+
+[node name="Control" type="Control" unique_id=1506855535]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=756059147]
+modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = -163.0
+offset_top = -157.0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = SubResource("NoiseTexture2D_xhnuk")
+script = ExtResource("1_xhnuk")

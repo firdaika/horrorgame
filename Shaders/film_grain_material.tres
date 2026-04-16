@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://ba7w8ow0vwpg6"]
+
+[ext_resource type="Shader" uid="uid://bd0s2eog3sqft" path="res://Shaders/film_grain_material.gdshader" id="1_k8edp"]
+
+[resource]
+shader = ExtResource("1_k8edp")
+shader_parameter/grain_intensity = 0.10000000475
+shader_parameter/vignette_intensity = 0.450000021375

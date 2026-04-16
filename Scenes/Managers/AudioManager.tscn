@@ -1,27 +1,39 @@
-[gd_scene load_steps=6 format=3 uid="uid://bssjjygu83iwl"]
+[gd_scene format=3 uid="uid://bssjjygu83iwl"]
 
 [ext_resource type="Script" uid="uid://da11xjja1ocm7" path="res://Scripts/AudioManager.gd" id="1_hp1cr"]
+[ext_resource type="AudioStream" uid="uid://62um51ljod76" path="res://Assets/Sound/FX/suara angin horror.mp3" id="2_6fbfh"]
 [ext_resource type="AudioStream" uid="uid://cyjn00m1ehkp1" path="res://Assets/Sound/FX/jump.wav" id="2_esrla"]
+[ext_resource type="AudioStream" uid="uid://b4uuplijtqbq8" path="res://Assets/Sound/FX/Walking in Snow - korban.mp3" id="3_egdra"]
 [ext_resource type="AudioStream" uid="uid://d2yw2hs5pd8cm" path="res://Assets/Sound/FX/coin_pickup.wav" id="3_qes3j"]
+[ext_resource type="AudioStream" uid="uid://dimolungw6ga0" path="res://Assets/Sound/FX/walking in gravel.mp3" id="4_6ivta"]
 [ext_resource type="AudioStream" uid="uid://b5gyns7mtiq0d" path="res://Assets/Sound/FX/hurt.wav" id="4_84782"]
 [ext_resource type="AudioStream" uid="uid://cbquowt7cd3d6" path="res://Assets/Sound/FX/level_complete.wav" id="5_84782"]
+[ext_resource type="AudioStream" uid="uid://cpujjhn84jsu3" path="res://Assets/Sound/FX/Sound Effect Footsteps On Deep Snow (slow) - Robert.mp3" id="5_stugb"]
+[ext_resource type="AudioStream" uid="uid://c2hghlle3jj73" path="res://Assets/Sound/FX/heart beat.mp3" id="6_stugb"]
+[ext_resource type="AudioStream" uid="uid://cu10emri3hy7e" path="res://Assets/Sound/FX/female breath.mp3" id="7_s537f"]
 
-[node name="AudioManager" type="Node"]
+[node name="AudioManager" type="Node" unique_id=1800356353]
 script = ExtResource("1_hp1cr")
+wind_stream = ExtResource("2_6fbfh")
+footstep_snow_stream = ExtResource("3_egdra")
+footstep_dirt_stream = ExtResource("4_6ivta")
+hansen_step_stream = ExtResource("5_stugb")
+heartbeat_stream = ExtResource("6_stugb")
+breathing_stream = ExtResource("7_s537f")
 
-[node name="JumpSfx" type="AudioStreamPlayer" parent="."]
+[node name="JumpSfx" type="AudioStreamPlayer" parent="." unique_id=1188041530]
 stream = ExtResource("2_esrla")
 volume_db = -3.0
 
-[node name="CoinPickup" type="AudioStreamPlayer" parent="."]
+[node name="CoinPickup" type="AudioStreamPlayer" parent="." unique_id=1671925736]
 stream = ExtResource("3_qes3j")
 
-[node name="DeathSfx" type="AudioStreamPlayer" parent="."]
+[node name="DeathSfx" type="AudioStreamPlayer" parent="." unique_id=673743056]
 stream = ExtResource("4_84782")
 volume_db = -3.0
 
-[node name="RespawnSfx" type="AudioStreamPlayer" parent="."]
+[node name="RespawnSfx" type="AudioStreamPlayer" parent="." unique_id=1371916241]
 
-[node name="LevelCompleteSfx" type="AudioStreamPlayer" parent="."]
+[node name="LevelCompleteSfx" type="AudioStreamPlayer" parent="." unique_id=1976579145]
 stream = ExtResource("5_84782")
 volume_db = -4.0

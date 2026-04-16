@@ -3,7 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://cyti38f0lagf2" path="res://Scenes/Prefabs/LevelFinishDoor.tscn" id="1_oqkjg"]
 [ext_resource type="PackedScene" uid="uid://w7m6tehvvy3g" path="res://Scenes/Prefabs/player.tscn" id="2_pay8t"]
 [ext_resource type="Script" uid="uid://g6oa1rfikatd" path="res://Scripts/GameManager.gd" id="4_vgfkr"]
+[ext_resource type="PackedScene" uid="uid://dyexaljymbi2n" path="res://control.tscn" id="5_37jai"]
 [ext_resource type="Texture2D" uid="uid://jaegp53ccc7w" path="res://Assets/Spritesheet/platformPack_tilesheet.png" id="5_wqbaa"]
+[ext_resource type="Material" uid="uid://ba7w8ow0vwpg6" path="res://Shaders/film_grain_material.tres" id="6_6q1ru"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gs0qk"]
 texture = ExtResource("5_wqbaa")
@@ -86,3 +88,22 @@ position = Vector2(174, 383)
 script = ExtResource("4_vgfkr")
 
 [node name="UserInterface" type="CanvasLayer" parent="." unique_id=1658506103]
+
+[node name="Control" parent="." unique_id=1506855535 instance=ExtResource("5_37jai")]
+visible = false
+offset_left = 152.0
+offset_top = 67.0
+offset_right = 152.0
+offset_bottom = 67.0
+
+[node name="effectsLayer" type="CanvasLayer" parent="." unique_id=781310453]
+layer = 10
+
+[node name="ColorRect" type="ColorRect" parent="effectsLayer" unique_id=1003297929]
+material = ExtResource("6_6q1ru")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
